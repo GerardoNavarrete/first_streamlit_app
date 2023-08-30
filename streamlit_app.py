@@ -23,7 +23,7 @@ fruits_shown = my_fruit_list.loc[fruits_selected]
 streamlit.dataframe(fruits_shown)
 
 # created an input 
-fruit_choice = streamlit.text_input('What fruit would you like information about?')
+fruit_choice = streamlit.text_input('What fruit would you like information about?','kiwi')
 streamlit.write('The user entered ', fruit_choice)
 
 # Import the From fruityvice website the watermelon info 
