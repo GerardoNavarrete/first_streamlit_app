@@ -22,6 +22,10 @@ fruits_shown = my_fruit_list.loc[fruits_selected]
 # Display the table on the page.
 streamlit.dataframe(fruits_shown)
 
+# created an input 
+fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+streamlit.write('The user entered ', fruit_choice)
+
 # Import the From fruityvice website the watermelon info 
 streamlit.header("FruityVice Fruit Advice")
 import requests
@@ -32,6 +36,4 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # Displays the normalized data istead of json format
 streamlit.dataframe(fruityvice_normalized)
 
-# created an input 
-fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
-streamlit.write('The user entered ', fruit_choice)
+
