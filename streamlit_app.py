@@ -46,5 +46,9 @@ my_data_row = my_cur.fetchone()
 streamlit.header("select * from pc_rivery_db.public.fruit_load_list")
 streamlit.dataframe(my_data_row)
 
+# created another input 
+add_my_fruit= streamlit.text_input('What fruit would you like information about?','jackfruit')
+streamlit.write('The user entered ', ad_my_fruit) 
+
 
 
